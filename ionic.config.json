@@ -1,0 +1,7 @@
+{
+  "name": "calcunyator3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
