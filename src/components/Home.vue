@@ -42,11 +42,6 @@
             {{ operation }}
           </el-button>
         </div>
-
-        <!-- <button :onclick="`new Audio('audio/digits/` + 1 + `.mp3').play(); return false;`">111</button> -->
-
-        <!-- <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
       </div>
     </ion-content>
   </div>
@@ -66,9 +61,11 @@
 
         value = value.toString()
         
-        // Вместо пустого выражения, использую точку, сугубо ради стилистики, впадлу разбираться как правильно сделать
+        // Сообщение об ошибке заменяем на пустое выражение. Малозначимая фигня, хотя да, стоило иначе сделать.
         let expression = ['#ERROR'].includes(this.expression) ? '' : this.expression
 
+        // Перечень возможных элементов выражение.
+        // Когда нажмут '=' - то выражение полетит вычисляться.
         const digits = ['0', '1' ,'2' ,'3' ,'4' ,'5' ,'6' ,'7' ,'8' ,'9' ,]
         const operations = ['-', '+', '/', '*']
         
@@ -86,6 +83,7 @@
         if (value == '=') {
           let result = ''
           try {
+            // Вычисление происходит тут
             result = eval(expression)
           } catch {}
           
