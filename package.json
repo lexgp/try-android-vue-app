@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "ionic:build": "npm run build",
-    "ionic:serve": "vite dev --host"
+    "ionic:serve": "npm run dev"
   },
   "dependencies": {
     "@capacitor/android": "5.4.1",
@@ -18,6 +18,8 @@
     "@capacitor/haptics": "5.0.6",
     "@capacitor/keyboard": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
+    "@element-plus/icons-vue": "^2.1.0",
+    "element-plus": "^2.3.14",
     "vue": "^3.3.4"
   },
   "devDependencies": {
